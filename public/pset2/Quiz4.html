@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Which Dog Are You?
+</title>
+<script LANGUAGE="JavaScript">
+function test_it(entry) {
+if (entry.value!=null && entry.value.length!=0) {
+entry.value=""+ eval(entry.value);
+}
+computeForm(entry.form);
+}
+function computeForm(form) {
+var total=0
+
+for (var count=0; count<5; count++)
+{
+if (form.a[count].checked){
+var total=total+parseInt(form.a[count].value);
+}
+}
+
+for (var count=0; count<5; count++)
+{
+if (form.b[count].checked){
+var total=total+parseInt(form.b[count].value);
+}
+}
+
+for (var count=0; count<5; count++)
+{
+if (form.c[count].checked){
+var total=total+parseInt(form.a[count].value);
+}
+}
+
+for (var count=0; count<5; count++)
+{
+if (form.d[count].checked){
+var total=total+parseInt(form.a[count].value);
+}
+}
+
+for (var count=0; count<5; count++)
+{
+if (form.e[count].checked){
+var total=total+parseInt(form.a[count].value);
+}
+}
+
+if (total<2){ window.location="You are Pards.html" }
+else if (total<7){ window.location="You are Baby.html" }
+else if (total<12){ window.location="You are Zeus.html" }
+else if (total<16){ window.location="You are Joey.html" }
+else { window.location="You are Juliette.html" }
+}
+//-->
+</script>
+</head>
+
+<body>
+<h1>Which Dog Are You?</h1>
+<form METHOD=POST>
+<b>There is a scary thunderstorm outside! What do you do?<br></b>
+<input TYPE="radio" NAME="a" VALUE="0">I didn't even notice.<br>
+<input TYPE="radio" NAME="a" VALUE="1">I'm taking cover under Mom's bed until it's safe again!<br>
+<input TYPE="radio" NAME="a" VALUE="2">I'll probably sit outside in the rain and contemplate life.<br>
+<input TYPE="radio" NAME="a" VALUE="3">I'm going to cuddle up with my friends until it passes.<br>
+<input TYPE="radio" NAME="a" VALUE="4">I'm too busy having fun to care!<br><br>
+
+<b>We're going outside! Where are we going??<br></b>
+<input TYPE="radio" NAME="b" VALUE="0">I think I'll sit this one out.<br>
+<input TYPE="radio" NAME="b" VALUE="1">Anywhere I can terrorize others for my own entertainment.<br>
+<input TYPE="radio" NAME="b" VALUE="2">A walk around the neighborhood! Don't forget to bring snacks!.<br>
+<input TYPE="radio" NAME="b" VALUE="3">My mom says I'm not leash trained...<br>
+<input TYPE="radio" NAME="b" VALUE="4">Anywere! I'm newly leash trained. Don't tell my brother!<br><br>
+
+
+<b>My idea of an action-packed day is...<br></b>
+<input TYPE="radio" NAME="c" VALUE="0">Lounging on the couch.<br>
+<input TYPE="radio" NAME="c" VALUE="1">Breaking through the electric fence and getting into all kinds of mischief!<br>
+<input TYPE="radio" NAME="c" VALUE="2">Scavenging around the house for food scraps and crumbs.<br>
+<input TYPE="radio" NAME="c" VALUE="3">Cuddling with my humans and wrestling with my siblings!.<br>
+<input TYPE="radio" NAME="c" VALUE="4">Seeking attention where I can get it and starting fights wherever I go.<br><br>
+
+
+<b>What's my best quality?<br></b>
+<input TYPE="radio" NAME="d" VALUE="0">I am wise.<br>
+<input TYPE="radio" NAME="d" VALUE="1">I am brave and protective of my loved ones.<br>
+<input TYPE="radio" NAME="d" VALUE="2">Although I am standoffish at first, I am very caring.<br>
+<input TYPE="radio" NAME="d" VALUE="3">I am sweet and snuggly.<br>
+<input TYPE="radio" NAME="d" VALUE="4">I am fun and loving.<br><br>
+
+<b>How do I con my humans out of their food?<br></b>
+<input TYPE="radio" NAME="e" VALUE="0">I establsih deep roots over many years and gain their trust...then steal their food.<br>
+<input TYPE="radio" NAME="e" VALUE="1">I wait until they are asleep and dig into the trashcans.<br>
+<input TYPE="radio" NAME="e" VALUE="2">I win the humans over with my big dreamy eyes.<br>
+<input TYPE="radio" NAME="e" VALUE="3">I do whatever the pack is doing!<br>
+<input TYPE="radio" NAME="e" VALUE="4">I cry as though I'm dying until I get what I want<br><br>
+<input TYPE="button" VALUE="Compute Score!" onClick=computeForm(this.form)><br><br>
+
+</form>
+</body>
+</html>
